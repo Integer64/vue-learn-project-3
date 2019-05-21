@@ -60,7 +60,7 @@ export default {
     [types.LOADING_DATA]: (state, payload) => {
         state.stocks = payload.stocks;
         state.funds = payload.funds;
-        if(payload.portfolioStock.length > 0) {
+        if(payload.portfolioStock && payload.portfolioStock.length > 0) {
             state.portfolioStock = payload.portfolioStock;
         }
     },
